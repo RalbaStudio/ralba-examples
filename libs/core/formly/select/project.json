@@ -1,0 +1,25 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/core/formly/select/src",
+  "prefix": "ral",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/core/formly/select"],
+      "options": {
+        "jestConfig": "libs/core/formly/select/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/core/formly/select/**/*.ts",
+          "libs/core/formly/select/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

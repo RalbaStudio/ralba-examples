@@ -1,0 +1,5 @@
+<!-- https://github.com/primefaces/primeng/issues/9636 -->
+<div class="relative">
+  <input pInputText [type]="to.type || 'text'" [formControl]="$any(formControl)" [formlyAttributes]="field"
+    (onBlur)="to.change && to.change(field, $event)" [attr.data-cy]="key" [style.opacity.0]="to && to.readonly" />
+</div>

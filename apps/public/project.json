@@ -14,7 +14,12 @@
         "tsConfig": "apps/public/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": ["apps/public/src/favicon.ico", "apps/public/src/assets"],
-        "styles": ["apps/public/src/styles.scss"],
+        "styles": [
+          "node_modules/primeng/resources/themes/tailwind-light/theme.css",
+          "node_modules/primeng/resources/primeng.min.css",
+          "apps/public/src/styles.scss"
+        ],
+
         "scripts": []
       },
       "configurations": {

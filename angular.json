@@ -2,6 +2,12 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "core-formly-all-modules": "libs/core/formly/all-modules",
+    "core-formly-checkbox": "libs/core/formly/checkbox",
+    "core-formly-input": "libs/core/formly/input",
+    "core-formly-select": "libs/core/formly/select",
+    "core-formly-validators": "libs/core/formly/validators",
+    "core-formly-wrapper": "libs/core/formly/wrapper",
     "public": "apps/public",
     "public-e2e": "apps/public-e2e"
   }

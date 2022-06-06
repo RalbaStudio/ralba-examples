@@ -1,0 +1,25 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/core/formly/checkbox/src",
+  "prefix": "ral",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/core/formly/checkbox"],
+      "options": {
+        "jestConfig": "libs/core/formly/checkbox/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/core/formly/checkbox/**/*.ts",
+          "libs/core/formly/checkbox/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

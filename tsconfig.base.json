@@ -14,7 +14,26 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@ralba-examples/core/formly/all-modules": [
+        "libs/core/formly/all-modules/src/index.ts"
+      ],
+      "@ralba-examples/core/formly/checkbox": [
+        "libs/core/formly/checkbox/src/index.ts"
+      ],
+      "@ralba-examples/core/formly/input": [
+        "libs/core/formly/input/src/index.ts"
+      ],
+      "@ralba-examples/core/formly/select": [
+        "libs/core/formly/select/src/index.ts"
+      ],
+      "@ralba-examples/core/formly/validators": [
+        "libs/core/formly/validators/src/index.ts"
+      ],
+      "@ralba-examples/core/formly/wrapper": [
+        "libs/core/formly/wrapper/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

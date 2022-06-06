@@ -1,0 +1,25 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/core/formly/validators/src",
+  "prefix": "ral",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/core/formly/validators"],
+      "options": {
+        "jestConfig": "libs/core/formly/validators/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/core/formly/validators/**/*.ts",
+          "libs/core/formly/validators/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

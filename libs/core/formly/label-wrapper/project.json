@@ -1,0 +1,25 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/core/formly/label-wrapper/src",
+  "prefix": "ral",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/core/formly/label-wrapper"],
+      "options": {
+        "jestConfig": "libs/core/formly/label-wrapper/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/core/formly/label-wrapper/**/*.ts",
+          "libs/core/formly/label-wrapper/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
