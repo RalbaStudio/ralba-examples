@@ -1,0 +1,30 @@
+{
+  "cli": "nx",
+  "id": "app-page",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of page",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "default": "items",
+      "x-prompt": "Name of page like items"
+    },
+    "prefix": {
+      "type": "string",
+      "description": "App name as definition of root",
+      "default": "tpa",
+      "x-prompt": "What is prefix for selector like [prefix]-items-page?"
+    },
+    "app": {
+      "type": "string",
+      "description": "Path where page should be created ",
+      "default": "tpa/web/portal/provider",
+      "x-prompt": "What is the path to place where the page should be created? An example would be \"tpa\""
+    }
+  },
+  "required": ["name", "prefix"]
+}

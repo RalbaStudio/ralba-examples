@@ -1,0 +1,30 @@
+{
+  "cli": "nx",
+  "id": "lib-grid",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the grid, such as \"products-grid\" or \"users-grid\"). Recommended to use the plural form of the name.",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "default": "users",
+      "x-prompt": "What name would you like to use for the name of app feature? An example would be \"users\"."
+    },
+    "prefix": {
+      "type": "string",
+      "description": "App selector prefix",
+      "default": "hrapka",
+      "x-prompt": "What is component selector prefix - example [hrapka]-user-grid"
+    },
+    "app": {
+      "type": "string",
+      "description": "App name as definition of root",
+      "default": "libs/hrapka/web/hrapka/features/ui/lib",
+      "x-prompt": "What is the destination path? An example would be \"libs/hrapka/web/hrapka/ui/src/lib\""
+    }
+  },
+  "required": ["name", "app", "prefix"]
+}

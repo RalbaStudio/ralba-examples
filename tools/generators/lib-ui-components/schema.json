@@ -1,0 +1,32 @@
+{
+  "cli": "nx",
+  "id": "lib-ui-components",
+  "type": "object",
+  "title": "Generate lib-ui-components based",
+  "properties": {
+    "path": {
+      "type": "string",
+      "description": "Name of the feature, such as \"products\" or \"users\"). Recommended to use the plural form of the name.",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "default": "libs/invbuild/web/ui",
+      "x-prompt": "Path to UI module (withou src)."
+    },
+
+    "prefix": {
+      "type": "string",
+      "description": "App name as definition of root",
+      "default": "invbuild",
+      "x-prompt": "What is prefix for selector like [prefix]-items-component?"
+    },
+    "components": {
+      "type": "string",
+      "description": "Feature pages setted with comma between",
+      "x-prompt": "What are the names of components for this feature separeted by comma? An example would be \"nav\",\"sidebar\",\"chat\",",
+      "default": "box,card"
+    }
+  },
+  "required": ["path", "prefix", "components"]
+}

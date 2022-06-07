@@ -1,0 +1,31 @@
+{
+  "id": "domain-module",
+  "$schema": "http://json-schema.org/schema",
+  "cli": "nx",
+  "title": "Create a TypeScript",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the NgRx feature state, such as \"products\" or \"users\"). Recommended to use the plural form of the name.",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "default": "users",
+      "x-prompt": "What name would you like to use for the NgRx feature state? An example would be \"users\"."
+    },
+    "module": {
+      "type": "string",
+      "description": "The path to NgModule where the feature state will be registered. The host directory will create/use the new state directory.",
+      "default": "apps/invoicing/web/app/src/app/features/pakes/",
+      "x-prompt": "What is the path to the module where this NgRx state should be registered?"
+    },
+    "directory": {
+      "type": "string",
+      "default": "+state",
+      "description": "The name of the folder used to contain/group the generated NgRx files."
+    }
+  },
+  "required": ["name"]
+}

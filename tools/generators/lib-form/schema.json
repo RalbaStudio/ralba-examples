@@ -1,0 +1,29 @@
+{
+  "cli": "nx",
+  "id": "lib-form",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "form name",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "What is the name of form  \"user-form\""
+    },
+    "prefix": {
+      "type": "string",
+      "description": "App selector prefix",
+      "default": "tpa",
+      "x-prompt": "What is component selector prefix - example [tpa]-user-form"
+    },
+    "app": {
+      "type": "string",
+      "description": "App name as definition of root",
+      "default": "libs/hrapka/web/hrapka/features/src/lib",
+      "x-prompt": "What is the destination path? An example would be \"libs/hrapka/web/hrapka/features/src/lib\""
+    }
+  },
+  "required": ["name", "app", "prefix"]
+}

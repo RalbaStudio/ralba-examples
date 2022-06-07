@@ -1,0 +1,37 @@
+{
+  "cli": "nx",
+  "id": "app-form",
+  "type": "object",
+
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the grid, such as \"products\" or \"users\"). Recommended to use the plural form of the name.",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "default": "user-form",
+      "x-prompt": "What name would you like to use for the name of app form? An example would be \"user-form\"."
+    },
+    "prefix": {
+      "type": "string",
+      "description": "App selector prefix",
+      "default": "tpa",
+      "x-prompt": "What is component selector prefix - example [tpa]-user-grid"
+    },
+    "app": {
+      "type": "string",
+      "description": "App name as definition of root",
+      "default": "tpa",
+      "x-prompt": "What is the name of app where this form should be registered? An acample would be \"tpa\""
+    },
+    "feature": {
+      "type": "string",
+      "description": "App feature",
+      "default": "tpa",
+      "x-prompt": "What is name of app feature where form should be registered"
+    }
+  },
+  "required": ["name", "app", "feature", "prefix"]
+}

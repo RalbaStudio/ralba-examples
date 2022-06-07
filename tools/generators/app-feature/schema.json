@@ -1,0 +1,37 @@
+{
+  "cli": "nx",
+  "id": "app-feature",
+  "type": "object",
+  "title": "Generate app feature based on name and app",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the feature, such as \"products\" or \"users\"). Recommended to use the plural form of the name.",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "default": "users",
+      "x-prompt": "What name would you like to use for the name of app feature? An example would be \"users\"."
+    },
+    "app": {
+      "type": "string",
+      "description": "Path fom root to app",
+      "default": "tpa/web/portal/provider",
+      "x-prompt": "What is the path to app where this feature should be registered? An example would be \"tpa\""
+    },
+    "prefix": {
+      "type": "string",
+      "description": "App name as definition of root",
+      "default": "tpa",
+      "x-prompt": "What is prefix for selector like [prefix]-items-page?"
+    },
+    "pages": {
+      "type": "string",
+      "description": "Feature pages setted with comma between",
+      "x-prompt": "What are the names of pages for this feature separeted by comma? An example would be \"projects\",\"project\",\"tasks\",",
+      "default": "entities,entity-detail"
+    }
+  },
+  "required": ["name", "app", "prefix", "pages"]
+}

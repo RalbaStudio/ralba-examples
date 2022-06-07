@@ -1,0 +1,30 @@
+{
+  "cli": "nx",
+  "id": "ui-form",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the form, such as \"client-message\"",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "default": "users",
+      "x-prompt": "What name would you like to use for the name of grid? An example would be \"users\"."
+    },
+    "prefix": {
+      "type": "string",
+      "description": "App selector prefix",
+      "default": "tpa",
+      "x-prompt": "What is component selector prefix - example [tpa]-user-grid"
+    },
+    "app": {
+      "type": "string",
+      "description": "App name as definition of root",
+      "default": "tpa",
+      "x-prompt": "What is the name of app where this feature should be registered?"
+    }
+  },
+  "required": ["name", "app"]
+}
