@@ -1,1 +1,30 @@
-<ralba-examples-nx-welcome></ralba-examples-nx-welcome>
+<router-outlet></router-outlet>
+
+
+<div
+  class="bg-white text-formText cookie-bar_wrapper fixed bottom-5 left-5 right-5 max-w-2xl rounded-[10px] z-50 text-center p-5 m-auto"
+  *ngIf="cookieOpened$ | async">
+  <div class="cookie-bar">
+    <div class="p-grid p-grid--with-bottom">
+      <div class="p-col-12 p-md text">
+        <p class="text-[13px] mb-5">
+          We use cookies to collect and analyse information on site
+          performance and usage, to provide social media features and to
+          enhance and customise content and advertisements.
+        </p>
+      </div>
+      <div class="flex gap-4 justify-center">
+        <div>
+          <button pButton type="button" label="Deny cookies" class="p-button-sm p-button-outlined" (click)="reject()">
+
+          </button>
+        </div>
+        <div>
+          <button pButton type="button" label="Allow cookies" class="p-button-sm" (click)="confirm()">
+
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

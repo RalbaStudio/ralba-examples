@@ -2,6 +2,8 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "core-configuration": "libs/core/configuration",
+    "core-cookie-bar": "libs/core/cookie-bar",
     "core-formly-all-modules": "libs/core/formly/all-modules",
     "core-formly-checkbox": "libs/core/formly/checkbox",
     "core-formly-input": "libs/core/formly/input",

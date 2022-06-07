@@ -1,0 +1,25 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/core/configuration/src",
+  "prefix": "ral",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/core/configuration"],
+      "options": {
+        "jestConfig": "libs/core/configuration/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/core/configuration/**/*.ts",
+          "libs/core/configuration/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,1 +1,120 @@
 /* You can add global styles to this file, and also import other style files */
+@use 'tailwindcss/base';
+@use 'tailwindcss/components';
+@use 'tailwindcss/utilities';
+
+@layer base {
+  html {
+    line-height: 1.6;
+    @apply text-[16px] 2xl:text-[18px];
+  }
+
+  body {
+    @apply text-[15px] 2xl:text-[17px];
+    // bg-lightBg  text-darkBg dark:bg-darkBg dark:text-lightBg;
+  }
+
+  :root {
+    --bg-shade-000: #f8e7f3;
+    --bg-shade-700: #1d1324;
+    --bg-shade-000-dropdown: #f8e7f3;
+    --bg-shade-700-dropdown: #1d1324;
+  }
+
+  html.dark {
+    --bg-shade-000: #f8e7f3;
+    --bg-shade-700: #1d1324;
+    --bg-shade-000-dropdown: #1d1324;
+    --bg-shade-700-dropdown: #f8e7f3;
+  }
+}
+
+@layer components {
+}
+
+@layer utilities {
+}
+
+.p-hidden-accessible {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.p-toast .p-toast-message .p-toast-message-content .p-toast-detail {
+  /* margin: 0.5rem 0 0 0; */
+  margin: 0 !important;
+  line-height: 1.4 !important;
+  padding-top: 0.1em !important;
+}
+
+.p-toast-message {
+  border-radius: 10px !important;
+}
+
+.pi-check {
+  :before {
+    content: '\f00c';
+  }
+}
+
+.p-inputtext {
+  padding-left: 24px;
+}
+
+.p-toast {
+  max-width: calc(100vw - 40px);
+}
+
+.p-dropdown {
+  font-size: 12px;
+  background: transparent !important;
+}
+
+.p-dropdown-panel {
+  border-radius: 3px !important;
+}
+.p-dropdown-label {
+  padding: 0.24rem 0.5rem 0.24rem 0.75rem !important;
+  background: transparent !important;
+
+  color: inherit;
+}
+
+.pi {
+  font-size: inherit;
+  font-style: normal;
+  &.pi-times {
+    font-family: 'Font Awesome 6 Pro';
+    font-weight: 400;
+
+    &:before {
+      font-style: normal;
+      content: '\f00d';
+    }
+  }
+}
+.p-dropdown-clear-icon {
+  right: 2.5rem !important;
+}
+
+.cookie-bar {
+  padding: 16px;
+  &_wrapper {
+    position: fixed;
+    z-index: 500;
+    right: 10px;
+    width: 100%;
+    margin: auto;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: #fff;
+    box-shadow: 0 0 4px 0 rgba(95, 95, 95, 0.2);
+  }
+}

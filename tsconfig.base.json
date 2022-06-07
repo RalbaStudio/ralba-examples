@@ -15,6 +15,11 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@ralba-examples/core/common": ["libs/core/common/src/index.ts"],
+      "@ralba-examples/core/configuration": [
+        "libs/core/configuration/src/index.ts"
+      ],
+      "@ralba-examples/core/cookie-bar": ["libs/core/cookie-bar/src/index.ts"],
       "@ralba-examples/core/formly/all-modules": [
         "libs/core/formly/all-modules/src/index.ts"
       ],

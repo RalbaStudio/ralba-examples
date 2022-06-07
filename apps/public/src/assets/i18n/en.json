@@ -1,0 +1,8 @@
+{
+  "FORM.VALIDATION.REQUIRED": "This field is required.",
+  "Validation.LessValue{0}": "The minimum value allowed is {{0}}.",
+  "Validation.MostValue{0}": "The maximum value allowed is {{0}}.",
+  "Validation.validateEmail": "Please enter your email in the correct format.",
+  "Validation.YouMustAggree": "This field is mandatory.",
+  "email": "E-mail"
+}
