@@ -7,22 +7,20 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormlyModule } from '@ngx-formly/core';
 import { CoreFormlyValidatorsModule } from '@ralba-examples/core/formly/validators';
 import { CoreFormlyWrapperModule } from '@ralba-examples/core/formly/wrapper';
+import { CoreFormlyDatepickerModule } from '@ralba-examples/core/formly/datepicker';
 
 @NgModule({
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    FormlyModule.forRoot({
-      extras: {
-        // lazyRender: true,
-      },
-    }),
+    FormlyModule.forRoot(),
     CoreFormlyWrapperModule,
     CoreFormlyValidatorsModule,
     CoreFormlySelectModule,
     CoreFormlyInputModule,
     CoreFormlySelectModule,
     CoreFormlyCheckboxModule,
+    CoreFormlyDatepickerModule
   ],
 })
 export class CoreFormlyAllModulesModule {}

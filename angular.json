@@ -6,6 +6,7 @@
     "core-cookie-bar": "libs/core/cookie-bar",
     "core-formly-all-modules": "libs/core/formly/all-modules",
     "core-formly-checkbox": "libs/core/formly/checkbox",
+    "core-formly-datepicker": "libs/core/formly/datepicker",
     "core-formly-input": "libs/core/formly/input",
     "core-formly-select": "libs/core/formly/select",
     "core-formly-validators": "libs/core/formly/validators",

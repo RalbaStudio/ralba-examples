@@ -26,6 +26,9 @@
       "@ralba-examples/core/formly/checkbox": [
         "libs/core/formly/checkbox/src/index.ts"
       ],
+      "@ralba-examples/core/formly/datepicker": [
+        "libs/core/formly/datepicker/src/index.ts"
+      ],
       "@ralba-examples/core/formly/input": [
         "libs/core/formly/input/src/index.ts"
       ],

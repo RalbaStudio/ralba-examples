@@ -27,6 +27,9 @@ module.exports = {
         w2500: '2500px',
         w3000: '3000px',
       },
+      color: {
+        primary: "#FF0"
+      }
     },
   },
   variants: {

@@ -1,0 +1,11 @@
+::ng-deep ralba-custom-calendar.inline-overlay-calendar {
+  .p-calendar {
+    flex-wrap: wrap;
+  }
+  .p-datepicker {
+    position: relative !important;
+    top: 0 !important;
+    width: auto;
+    min-width: 100%;
+  }
+}
