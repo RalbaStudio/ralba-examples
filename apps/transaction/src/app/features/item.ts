@@ -1,8 +1,9 @@
 export interface Item  {
-//date: string,
+id: number;
+date: string,
 name : string,
-//from: string,
-//to: string,
+from: string,
+to: string,
 amount: number,
 note: string
 }

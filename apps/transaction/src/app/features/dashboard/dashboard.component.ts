@@ -10,22 +10,13 @@ import { Item } from '../item';
   styleUrls: ['./dashboard.component.css'],
 })
 export class DashboardComponent implements OnInit {
-  //items = ITEMS;
   items: Item[] = [];
-  titleDashboard = 'Dashboard';
-  selectedItem?: Item;
 
   constructor(private itemService: ItemService) {}
   ngOnInit(): void {
     this.getItems();
   }
-  createItem() {
-    return null;
-  }
   getItems(): void {
-    this.items = this.itemService.getItems();
-  }
-  onSelect(item: Item): void {
-    this.selectedItem = item;
+    this.itemService.getItems().subscribe(items => this.items = items);
   }
 }

@@ -17,7 +17,12 @@
           "apps/transaction/src/favicon.ico",
           "apps/transaction/src/assets"
         ],
-        "styles": ["apps/transaction/src/styles.scss","node_modules/primeng/resources/themes/tailwind-light/theme.css","node_modules/primeng/resources/primeng.min.css"],
+        "styles": [
+          "apps/transaction/src/styles.scss",
+          "node_modules/primeng/resources/themes/tailwind-light/theme.css",
+          "node_modules/primeng/resources/primeng.min.css",
+          "node_modules/primeicons/primeicons.css"
+        ],
         "scripts": []
       },
       "configurations": {

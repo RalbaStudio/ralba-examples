@@ -1,5 +1,42 @@
 {
+    "vscode-graphql.useSchemaFileDefinitions": true,
+    "files.exclude": {
+      "**/.git": false,
+      "**/.svn": false,
+      "**/.hg": false,
+      "**/CVS": false,
+      "**/.DS_Store": false,
+    },
+    "explorerExclude.backup": null,
+    "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.tabSize": 2
+    },
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.tabSize": 2
+    },
+    "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.tabSize": 2
+    },
+    "typescript.tsdk": "node_modules/typescript/lib",
+    //   "liveSassCompile.settings.includeItems": [
+    //     "keycloak/themes/ralba-theme/login/resources/css/main.scss",
+    //     "keycloak/themes/ralba-theme/account/resources/css/main.scss"
+    //   ],
+  
+    "cSpell.language": "en,cs",
+  
     "cSpell.words": [
-        "Formly"
-    ]
-}
+      "accesscontrol",
+      "appconfig",
+      "appthor",
+      "autofix",
+      "autolinker",
+      "autoresize",
+      "webp",
+      "ztpp"
+  ],
+    "vsicons.presets.angular": true
+  }
