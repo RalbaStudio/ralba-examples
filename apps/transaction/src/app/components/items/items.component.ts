@@ -33,12 +33,12 @@ export class ItemsComponent implements OnInit {
 
 ngOnInit(): void {
   //this.fireItemService.getAllItems()
-    this.store.dispatch(action.ItemActions.loadItems());
+    // this.store.dispatch(action.ItemActions.loadItems());
 }
   
   delete(item: Item): void {
     //this.itemService.deleteItem(item);
-    this.store.dispatch(action.ItemActions.deleteItem({ id: item.id }))
+    // this.store.dispatch(action.ItemActions.deleteItem({ id: item.id }))
   }
 
   update(item :Item){
