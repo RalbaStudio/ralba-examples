@@ -19,7 +19,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
         {
           name: 'date-picker',
           component: DatePickerComponent,
-          wrappers: ['form-field'],
+          wrappers: ['wrapper'],
         },
       ],
     }),

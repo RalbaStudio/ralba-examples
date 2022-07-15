@@ -5,7 +5,9 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/transaction",
         "index": "apps/transaction/src/index.html",
@@ -87,7 +89,9 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/transaction"],
+      "outputs": [
+        "coverage/apps/transaction"
+      ],
       "options": {
         "jestConfig": "apps/transaction/jest.config.ts",
         "passWithNoTests": true

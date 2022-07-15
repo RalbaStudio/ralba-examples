@@ -1,0 +1,7 @@
+<p-menu *ngIf=" isVisible$ | async" [model]="tabs"></p-menu>
+
+<button (click)="showMenu()">Show Menu</button>
+<button (click)="hideMenu()">Hide Menu</button>
+
+<div>Current Visibility {{  isVisible$ | async | json }}</div>
+

@@ -5,7 +5,9 @@
   "targets": {
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/core/formly/all-modules"],
+      "outputs": [
+        "coverage/libs/core/formly/all-modules"
+      ],
       "options": {
         "jestConfig": "libs/core/formly/all-modules/jest.config.ts",
         "passWithNoTests": true

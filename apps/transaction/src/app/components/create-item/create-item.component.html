@@ -1,0 +1,16 @@
+<form [formGroup]="form">
+  <formly-form [model]="model" [fields]="fields" [options]="options" [form]="form"></formly-form>
+   <p-button (onClick)="buttonAction(model)"  type="submit" [disabled]="!form.valid">Uložit</p-button>
+  <td style="text-align: center">
+</td>
+</form>
+
+
+<pre>{{model | json}}</pre>
+
+
+
+<pre>{{items$ | async | json}}</pre>
+
+
+

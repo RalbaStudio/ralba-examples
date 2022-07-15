@@ -3,6 +3,7 @@ import * as _ from '../reducers';
 
 const selectState = createFeatureSelector<_.CookieBarState>(_.FEATURE_KEY);
 
+
 const selectCookieDetactions = createSelector(
   selectState,
   _.selectCookieDetactions

@@ -5,7 +5,9 @@
   "targets": {
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/core/formly/checkbox"],
+      "outputs": [
+        "coverage/libs/core/formly/checkbox"
+      ],
       "options": {
         "jestConfig": "libs/core/formly/checkbox/jest.config.ts",
         "passWithNoTests": true

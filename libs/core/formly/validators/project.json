@@ -5,7 +5,9 @@
   "targets": {
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/core/formly/validators"],
+      "outputs": [
+        "coverage/libs/core/formly/validators"
+      ],
       "options": {
         "jestConfig": "libs/core/formly/validators/jest.config.ts",
         "passWithNoTests": true

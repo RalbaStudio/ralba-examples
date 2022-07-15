@@ -35,8 +35,10 @@
       "autofix",
       "autolinker",
       "autoresize",
+      "Formly",
       "webp",
       "ztpp"
-  ],
-    "vsicons.presets.angular": true
+    ],
+    "vsicons.presets.angular": true,
+    "vscode.tsc.compiler.alertTSConfigChanges": "never"
   }
