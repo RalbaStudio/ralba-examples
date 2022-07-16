@@ -1,3 +1,4 @@
+import { Message } from '@angular/compiler/src/i18n/i18n_ast';
 import { EntityState, EntityAdapter, createEntityAdapter } from '@ngrx/entity';
 import {
   createReducer,
@@ -23,7 +24,7 @@ export const itemReducer = createReducer(
     return adapter.updateOne( update, state)
   }),on(ItemActions.REMOVED, (state, { id }) => {
     return adapter.removeOne(id, state);
-  }),
+  })
 );
 
 // get the selectors

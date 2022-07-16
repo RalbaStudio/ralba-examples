@@ -1,9 +1,12 @@
 import { createAction,props } from "@ngrx/store";
 import { Update } from "@ngrx/entity";
 import { Item } from "../model/item";
+import { create } from "lodash";
 
 
 const QUERY = createAction('[Items Component] query Items');
+
+const REQUEST = createAction('[Dashboard Component] requesting Items',props<{message: string}>());
 
 const ADDED = createAction('[CreateItem Component] added',props<{ item: Item }>());
 
@@ -25,6 +28,7 @@ SUCCESS,
 QUERY,
 UPDATE,
 ADDED,
-REMOVED
+REMOVED,
+REQUEST
 }
 

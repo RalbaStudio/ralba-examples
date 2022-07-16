@@ -13,13 +13,12 @@ export class fireItemService {
 
   // add item
   addItem(item : Item) {
-    //item.id = this.afs.createId();
     return this.afs.collection('/Items').add(item);
   }
 
   // get all items
   getAllItems() {
-    return this.afs.collection<Item>('/Items').snapshotChanges();
+    return this.afs.collection('/Items').snapshotChanges();
   }
 
   // delete student

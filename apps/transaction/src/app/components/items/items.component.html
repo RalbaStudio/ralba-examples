@@ -30,3 +30,10 @@
         </tr>
     </ng-template>
 </p-table>
+
+<pre>{{items$ | async | json}}</pre>
+<div *ngFor="let item of items$| async"> 
+<h4>Name {{item.name}}</h4>
+<h3>ID {{item.id}}</h3>
+
+</div>

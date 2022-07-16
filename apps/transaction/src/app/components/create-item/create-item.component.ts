@@ -202,18 +202,7 @@ export class CreateItemComponent implements OnInit {
     //   },
     //   this.parameter['id']
     // );
-    this.store.dispatch(action.ItemActions.updateItem({ //change to UPDATE
-      item: {
-        id: this.parameter['id'] || '',
-        date: model.date || '',
-        name: model.name || '',
-        to: model.to || '',
-        from: model.from || '',
-        note: model.note || '',
-        amount: parseFloat(model.amount || '0')
-      },
-    })
-  );
+    this.store.dispatch(action.ItemActions.UPDATE(this.parameter['id']));
   console.log("updated");
 }
 

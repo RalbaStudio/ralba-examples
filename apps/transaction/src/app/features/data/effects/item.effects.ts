@@ -4,16 +4,59 @@ import { Store } from '@ngrx/store';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 //import * as ItemReducer from '../reducers/item.reducer';
 import { fireItemService } from '../../../Services/fireItem.service';
-import { combineLatest } from 'rxjs';
 
-import * as itemAction from '../actions/index';
-import { catchError, exhaustMap, of, map, switchMap, Observable, Subject } from 'rxjs';
+import { ItemActions } from '../actions/index';
+import { exhaustMap, combineLatest, mergeMap, map, switchMap } from 'rxjs';
 //import { state } from '@angular/animations';
 import { Item } from '../model/item';
 import { Action } from 'rxjs/internal/scheduler/Action';
 
 @Injectable()
 export class ItemEffects {
+  $query = createEffect(
+    () =>
+      this.$action.pipe(
+        ofType(ItemActions.QUERY),
+        switchMap(() => this.afs.collection<Item>('/Items').stateChanges()),
+        mergeMap((actions) => actions),
+        map((action) => {
+          switch (action.type) {
+            case 'added': {
+              return ItemActions.ADDED({
+                item: {
+                  ...action.payload.doc.data(),
+                  id: action.payload.doc.id,
+                },
+              });
+            }
+            case 'modified': {
+              return ItemActions.MODIFIED({
+                item: {
+                  ...action.payload.doc.data(),
+                  id: action.payload.doc.id,
+                },
+              });
+            }
+            case 'removed': {
+              return ItemActions.REMOVED({
+                id: action.payload.doc.id,
+              });
+            }
+          }
+        })
+      ),
+    { dispatch: false }
+  );
+
+  $saveItem = createEffect(
+    () =>
+      this.$action.pipe(
+        ofType(ItemActions.ADDED),
+        exhaustMap((p) => this.service.addItem(p.item))
+      ),
+    { dispatch: false }
+  );
+
   constructor(
     private store$: Store<never>,
     private $action: Actions,
@@ -21,56 +64,16 @@ export class ItemEffects {
     private service: fireItemService
   ) {}
 
-     
-$query = createEffect(
-  this.$action.pipe(ofType(itemAction.ItemActions.QUERY),switchMap(Action => {
-    console(Action)
-    afs.collection('items', ref => ref.where('status', '==', 'available'))
-  })
-  )
-);
-/* $query = this.$action.pipe(ofType(itemAction.ItemActions.QUERY),
-  switchMap( ({status}) => {status$ => console(Action)
-   this.afs.collection<Item>('/Items', ref =>{
-    let query : firebase.firestore.Query = ref;
-   
-   } 
-  }
-  )
-);
-this.items$ = Observable.combineLatest(
-  this.sizeFilter$,
-  this.colorFilter$
-).switchMap(([size, color]) => 
-  afs.collection<Item>('items', ref => {
-    let query : firebase.firestore.Query = ref;
-    if (size) { query = query.where('size', '==', size) };
-    if (color) { query = query.where('color', '==', color) };
-    return query;
-  }).valueChanges()
-);
-*/
-  $saveItem = createEffect(
-    () =>
-      this.$action.pipe(
-        ofType(itemAction.ItemActions.ADDED),
-        exhaustMap((p) => this.service.addItem(p.item))
-      ),
-    { dispatch: false }
-  );
+  // $updateItem = createEffect(
+  //   () =>
+  //     this.$action.pipe(
+  //       ofType(ItemActions.UPDATE),
+  //       exhaustMap(async (p) => this.service.updateItem())
+  //     ),
+  //   { dispatch: false }
+  // );
 
-
-
-  $updateItem = createEffect(
-    () =>
-      this.$action.pipe(
-        ofType(itemAction.ItemActions.UPDATE),
-        exhaustMap(async (p) => this.service.updateItem())
-      ),
-    { dispatch: false }
-  );
-  
-/*
+  /*
   $getItem = createEffect(
     () =>
       this.$action.pipe(

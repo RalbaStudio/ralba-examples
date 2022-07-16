@@ -1,6 +1,5 @@
-<div class="inline-flex" *ngFor="let item of items">
+<div *ngFor="let item of items$| async" class="inline-flex" >
 <p-card class="" header="{{item.name}}">
-
 <p>{{item.note}}</p>
 <p>Amount:{{item.amount| currency : "czk" }}</p>
 <a routerLink="/items/{{item.name}}">Detail</a>

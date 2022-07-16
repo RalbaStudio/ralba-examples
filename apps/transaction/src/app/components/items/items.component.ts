@@ -23,7 +23,7 @@ import { fireItemService } from '../../Services/fireItem.service';
 export class ItemsComponent implements OnInit {
 
   items$ = this.store.pipe(select(ItemSelector.selectAllItems));
-  items: Item[] = []
+  //items: Item[] = []
   title = "Items";
   router: any;
 
@@ -32,13 +32,15 @@ export class ItemsComponent implements OnInit {
   }
 
 ngOnInit(): void {
-  //this.fireItemService.getAllItems()
-    this.store.dispatch(action.ItemActions.loadItems());
+   // this.fireItemService.getAllItems()
+   this.store.dispatch(action.ItemActions.QUERY())
+
 }
   
   delete(item: Item): void {
     //this.itemService.deleteItem(item);
-    this.store.dispatch(action.ItemActions.deleteItem({ id: item.id }))
+    this.store.dispatch(action.ItemActions.REMOVED({ id: item.id }))
+
   }
 
   update(item :Item){
