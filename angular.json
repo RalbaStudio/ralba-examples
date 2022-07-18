@@ -11,8 +11,6 @@
     "core-formly-select": "libs/core/formly/select",
     "core-formly-validators": "libs/core/formly/validators",
     "core-formly-wrapper": "libs/core/formly/wrapper",
-    "ngrx-counter": "apps/ngrx-counter",
-    "ngrx-counter-e2e": "apps/ngrx-counter-e2e",
     "public": "apps/public",
     "public-e2e": "apps/public-e2e",
     "transaction": "apps/transaction",
