@@ -20,7 +20,7 @@ import { AppGuard } from './app.guard';
         },
       ],
       {
-        initialNavigation: 'enabled',
+        initialNavigation: 'enabledBlocking',
 
         anchorScrolling: 'enabled',
         paramsInheritanceStrategy: 'always',

@@ -7,7 +7,7 @@ import {
 } from '@angular/core';
 import {
   ControlValueAccessor,
-  FormControl,
+  UntypedFormControl,
   NG_VALUE_ACCESSOR,
 } from '@angular/forms';
 import { Calendar } from 'primeng/calendar';
@@ -50,7 +50,7 @@ const CUSTOM_CALENDAR_CONTROL_VALUE_ACCESSOR: ExistingProvider = {
 })
 export class CustomCalendarComponent implements ControlValueAccessor {
   model: Date | null = null;
-  @Input() formControl: FormControl = new FormControl();
+  @Input() formControl: UntypedFormControl = new UntypedFormControl();
   @Input() disabled = false;
   // primeng property for UI
   @Input() showTime = false;
